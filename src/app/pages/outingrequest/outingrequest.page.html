@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Student Outing Request</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+        <form  #form="ngForm">
+  <ion-item>
+      <ion-label position="stacked">Outing Description</ion-label>
+      <ion-input name="description" type="text" value="{{request1.description}}" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Outing Date</ion-label>
+      <ion-input name="date" type="date" value="{{request1.date}}"disabled></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Remarks</ion-label>
+        <ion-input name="parents_remarks"  type="text" placeholder="Enter Remarks" ngModel required ></ion-input>
+    </ion-item>
+   <ion-item> 
+    <ion-button type="accept" size="medium" color="primary" class="submit" (click)="accept(form)">accept</ion-button>
+    <ion-button type="reject" size="medium" color="danger" class="submit" (click)="reject(form)">reject</ion-button>
+  </ion-item>
+  </form>
+  </ion-card>
+  </ion-content>

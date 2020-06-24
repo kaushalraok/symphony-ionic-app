@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Ticket</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+<ion-item>
+    <ion-input name="description"  [(ngModel)]="description" placeholder="Enter Description" ngModel required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input name="date" type="date" [(ngModel)]="date" [disabled]="this.data" ></ion-input>
+  </ion-item>
+<ion-item> <ion-button type="submit" size="medium" color="primary" class="submit">submit</ion-button>
+</ion-item>
+</form>
+</ion-card>
+</ion-content>

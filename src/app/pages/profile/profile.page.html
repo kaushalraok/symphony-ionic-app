@@ -1,0 +1,77 @@
+<ion-header>
+        <ion-toolbar color="primary">
+            <ion-buttons slots="start">
+                <ion-menu-button>          
+                </ion-menu-button>
+                <ion-title>User Profile</ion-title>
+            </ion-buttons>
+        </ion-toolbar>
+      </ion-header> 
+<ion-content >
+    <form  #form="ngForm" (ngSubmit)="submit(form)">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div padding>
+                <ion-item>
+                    <ion-label position="stacked">Student First Name</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.first_name}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Student Last Name</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.last_name}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">DOB</ion-label>
+                    <ion-input type="date" [disabled]="this.data">{{profile.date_of_birth}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Course/Job</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.cource_or_job}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">College/Work place</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.work_or_college}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Number Of Years</ion-label>
+                    <ion-input type="number" [disabled]="this.data">{{profile.years}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Parents Name</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.parents_name}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Flat No</ion-label>
+                    <ion-input type="number" [disabled]="this.data">{{profile.flat_no}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Street Name</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.street_name}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Locality</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.locality}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Land Mark</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.land_mark}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">City</ion-label>
+                    <ion-input type="text" [disabled]="this.data">{{profile.city}}</ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">State</ion-label>
+                    <ion-input type="text"[disabled]="this.data" >{{profile.state}}</ion-input>
+                </ion-item>
+            </div>
+            <div padding>
+              <ion-button  size="medium" color="danger" type="submit" [disabled]="form.invalid" (click)="edit()" >Edit</ion-button>
+              <ion-button  size="medium" color="primary" type="submit" [disabled]="this.data" >Submit</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>

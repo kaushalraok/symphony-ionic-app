@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slots="start">
+            <ion-menu-button>          
+            </ion-menu-button>
+            <ion-title>Outing Ticket</ion-title>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header> 
+    <br>
+    <ion-content>
+<ion-card>
+    <ion-item (click)="newRequest()">
+      <ion-icon name="log-out" slot="start"></ion-icon>
+      <ion-label>New outing request</ion-label>
+    </ion-item>
+</ion-card>
+<br>
+<ion-card>
+    <ion-item href="#">
+      <ion-icon name="mail-open" slot="start"></ion-icon>
+      <ion-label>Outing request status</ion-label>
+    </ion-item>
+</ion-card>
+<br>
+<ion-card>
+    <ion-item (click)="approveRequest()">
+      <ion-icon name="mail-open" slot="start"></ion-icon>
+      <ion-label>Student Outing request</ion-label>
+    </ion-item>
+</ion-card>
+</ion-content>

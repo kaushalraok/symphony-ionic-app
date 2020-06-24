@@ -1,0 +1,18 @@
+<ion-app>
+
+    <ion-menu  content-id="menu" class="my-custom-menu">
+        <ion-list>
+            <ion-item routerLink='/menu' menuClose >Home
+                    <ion-icon name="home" class="icon" color="primary"></ion-icon>
+                </ion-item>
+            <ion-item routerLink='/profile' menuClose >Profile
+                <ion-icon name="contact" class="icon" color="primary"></ion-icon>
+            </ion-item>
+            <ion-item routerLink='/outing' menuClose >Outing
+                <ion-icon name="create" class="icon" color="primary"></ion-icon>
+            </ion-item>
+          </ion-list>
+      </ion-menu>
+
+  <ion-router-outlet id="menu"></ion-router-outlet>
+</ion-app>
